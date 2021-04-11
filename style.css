@@ -13,28 +13,22 @@ body {
     padding: 20px;
     height: 100vh;
   }
-  
-  .page-title {
-    color: #ffffff;
-    margin: 0 0 5px;
-  }
-  
-  .page-subtitle {
-    color: #ffffff;
-    margin-top: 5px;
-  }
-  
-  .page-logo {
-    width: 200px;
-  }
-  
-  .alura-logo {
-    width: 40px;
-    position: absolute;
-    top: 10px;
-    right:10px;
-  }
-  
+  .card{
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0px;
+    border-radius: 2px;
+    margin:10px;
+    width: 40%;
+    min-width: 300px;
+    min-height: 400px;
+    border: solid rgb(120, 120, 208) 2px;  
+    background-size: cover;
+    background-position: bottom; 
+}
+
   @media (max-height: 500px) {
     body {
       min-height:800px;
