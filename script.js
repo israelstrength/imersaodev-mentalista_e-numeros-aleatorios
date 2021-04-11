@@ -1,28 +1,44 @@
-var numeroSecreto = parseInt(Math.random()* 10);
-console.log(numeroSecreto)
-var tentativas = 3;
-while(tentativas > 0){
-    var chute = parseInt(prompt('Digite um número entre 0 e 10'));
-    
-  if(numeroSecreto == chute){
-      alert('Acertou')
-    break
-    } else if ( chute > numeroSecreto){
-      alert('O número secreto é menor ');
-      tentativas = tentativas - 1
-    } else if(chute < numeroSecreto){
-      alert('O número secreto é maior')
-      tentativas = tentativas - 1
-    } 
-  }
-if( chute !== numeroSecreto){
-  alert('Suas tentativas acabaram. O número secreto era ' + numeroSecreto)  
+let i = 3;
+let computer = Math.ceil(Math.random()*10);
+function ValorMentalista() {
+    let usuario = parseInt(document.querySelector('#entradaDeNumeroMentalista').value);
+    let dica = usuario / computer
+    i=i-1
+    console.log(computer)
+    let  resultado3 = document.getElementById('respostaMentalista');
+        if (i > 0)
+        {
+            if(computer == usuario)
+            {
+                resultado3.innerHTML = `Parabens!<br>Mentalista `;
+             
+                i = "fim"
+            }
+            else{
+                if(dica>1)
+                {
+                    resultado3.innerHTML =`Errou, é menor!<br>Você tem somente ${i} tentativas`;
+                    
+                }
+                else
+                {
+                    resultado3.innerHTML = `Errou, é maior!<br>Você tem somente ${i} tentativas`;
+                }
+            }
+        }
+        else if(i=="fim")
+        {
+            resultado3.innerHTML = 
+            `
+            Jogo finalizado
+            `;
+        }
+        else if(i<0)
+        {
+            resultado3.innerHTML = 
+            `
+            Você perdeu!
+            `;
+        }
+document.querySelector('#entradaDeNumeroMentalista').value = ""
 }
-
-
-// var total = 0;
-// while(total < 5){
-//   console.log(total)
-//   total = total + 1
-// }
-// alert('O número final é: '+ total)
