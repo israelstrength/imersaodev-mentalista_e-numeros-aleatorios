@@ -28,9 +28,8 @@ body {
     background-size: cover;
     background-position: bottom; 
 }
-
-  @media (max-height: 500px) {
-    body {
-      min-height:800px;
-    }
-  }
+.card:nth-child(1) {
+    background-image: url(https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-03-mentalista.png);
+  
+}
+  
